@@ -24,6 +24,8 @@ if(!empty($_GET)){
         $req = $bdd->prepare('INSERT INTO commentaires(id_billet, auteur, commentaire, date_commentaire) VALUES(?,?,?,?)');
         $req->execute(array($id,$auteur,$message,$dateDuCommentaire));
 
+        header('Location: secret.php');
+
     }
 
     //Requete pour afficher le billet en cours
